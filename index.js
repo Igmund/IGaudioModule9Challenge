@@ -47,8 +47,25 @@ const questions = [
         name: "test",
         section: "Please give any test instructions"
       },
+      {
+        type: 'list',
+        name: 'license',
+        message: 'Please choose a license (use arrow keys and hit enter)',
+        choices: ['None', 'MIT', 'GNU GPLv3', 'Mozilla Public 2.0', 'The Unlicense', 'Apache 2.0']
+    },
 
 ];
+
+then(data => {
+    console.log(data);
+    return generateMarkdown(data)
+})
+.then(markdown => {
+   return writeToFile(markdown)
+})
+;
+
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
