@@ -53,6 +53,11 @@ const questions = [
         section: 'Please choose a license (use arrow keys and hit enter)',
         choices: ['None', 'Apache 2.0', 'MIT', 'GNU GPLv3', 'Mozilla Public 2.0', 'Do What The F*ck You Want To Public License', 'The Unlicense']
     },
+    {
+        type: "input",
+        name: "email",
+        section: "Please give email address"
+      },
 
 ];
 
@@ -64,11 +69,11 @@ function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(fileName), data);
     console.log('check out your new README at')
 }
-.catch((err) => {
-    if (err) {
-      throw err;
-    }
-})
+// catch((err) => {
+//     if (err) {
+//       throw err;
+//     }
+// })
 ;
 
 // TODO: Create a function to initialize app
