@@ -56,21 +56,20 @@ const questions = [
 
 ];
 
-then(data => {
-    console.log(data);
-    return generateMarkdown(data)
-})
-.then(markdown => {
-   return writeToFile(markdown)
-})
-;
 
 
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(fileName), data);
+    console.log('check out your new README at xcxxx')
 }
+.catch((err) => {
+    if (err) {
+      throw err;
+    }
+})
+;
 
 // TODO: Create a function to initialize app
 function init() {
