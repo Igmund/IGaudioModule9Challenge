@@ -50,8 +50,8 @@ const questions = [
       {
         type: 'list',
         name: 'license',
-        message: 'Please choose a license (use arrow keys and hit enter)',
-        choices: ['None', 'MIT', 'GNU GPLv3', 'Mozilla Public 2.0', 'The Unlicense', 'Apache 2.0']
+        section: 'Please choose a license (use arrow keys and hit enter)',
+        choices: ['None', 'Apache 2.0', 'MIT', 'GNU GPLv3', 'Mozilla Public 2.0', 'Do What The F*ck You Want To Public License', 'The Unlicense']
     },
 
 ];
@@ -62,7 +62,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(fileName), data);
-    console.log('check out your new README at xcxxx')
+    console.log('check out your new README at')
 }
 .catch((err) => {
     if (err) {
