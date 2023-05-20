@@ -3,6 +3,9 @@ const inquirer = require('inquirer')
 const fs = require('fs')
 const gm = require('./utils/generateMarkdown')
 const path = require('path')
+const tableOfContents = questions.map(question => question.name);
+//console.log(tableOfContents);
+
 let dir = '../Dist'
 
 // TODO: Create an array of questions for user input
@@ -68,7 +71,9 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(directory, fileName, data) {
   const filePath = path.join(directory, fileName);
-  return fs.writeFileSync(filePath, data);
+  const content = `${tableOfContents.map(item => `- ${item}`).join('\n')}\n\n${data}`;
+  return fs.writeFileSync(filePath, content);
+  //return fs.writeFileSync(filePath, data);
 }
     console.log('check out your new README in the results folder!')
 
