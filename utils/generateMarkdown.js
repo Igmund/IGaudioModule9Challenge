@@ -15,11 +15,10 @@ function renderLicenseLink(license) {
   if(license === 'None'){
     return '';
   } else {
-  const licenseAWithoutSpaces = license.replace(/\s/g, '');
-    return `https://opensource.org/licenses/${licenseAWithoutSpaces}`
+  const licenseWithoutSpaces = license.replace(/\s/g, '');
+    return `https://opensource.org/licenses/${licenseWithoutSpaces}`
   }
 }
-
 
 
 // TODO: Create a function that returns the license section of README
