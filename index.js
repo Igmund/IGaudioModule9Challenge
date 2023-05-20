@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require('fs')
-const gm = require('../utils/generateMarkdown')
+const gm = require('./utils/generateMarkdown')
 const path = require('path')
 let dir = '../Dist'
 
