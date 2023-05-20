@@ -4,7 +4,7 @@ function renderLicenseBadge(license) {
   if(license === 'None'){
     return '';
   } else {
-    return `![license](https://img.shields.io/badge/${license}-pink.svg)`
+    return `![license](https://img.shields.io/badge/${licenseWithoutSpaces}-pink.svg)`
   }
 }
 
