@@ -23,13 +23,7 @@ const questions = [
         name: "description",
         section: "Please give description"
       },
-      //Fix table of contents to try be a list
-      {
-        type: "input",
-        name: "contents",
-        section: "Please give Table of Contents "
-      },
-      {
+       {
         type: "input",
         name: "instructions",
         section: "Please give installation instructions"

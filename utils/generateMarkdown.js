@@ -19,7 +19,8 @@ function renderLicenseSection(license) {
   if(license === 'None'){
     return '';
   } else {
-    return `https://opensource.org/licenses/${license}`
+  const licenseWithoutSpaces = license.replace(/\s/g, '');
+    return `https://opensource.org/licenses/${licenseWithoutSpaces}`
   }
 }
 
@@ -27,6 +28,8 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
+ 
   ${renderLicenseBadge(data.license)}
  
   ## Description
