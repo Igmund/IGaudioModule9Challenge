@@ -22,6 +22,7 @@ const questions = [
         name: "description",
         section: "Please give description"
       },
+      //Fix table of contents to try be a list
       {
         type: "input",
         name: "contents",
@@ -60,15 +61,17 @@ const questions = [
       },
 
 ];
-
+//Check generation output
 
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(fileName), data);
-    console.log('check out your new README at')
+function writeToFile(directory, fileName, data) {
+  const filePath = path.join(directory, fileName);
+  return fs.writeFileSync(filePath, data);
 }
+    console.log('check out your new README in the results folder!')
+
 // catch((err) => {
 //     if (err) {
 //       throw err;
@@ -80,7 +83,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then((answers) => {
-        writeToFile("README.md", gm({...answers}));
+         writeToFile("./results", "README.md", gm({...answers}));
     })
 }
 
