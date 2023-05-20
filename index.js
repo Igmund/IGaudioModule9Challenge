@@ -10,7 +10,7 @@ let dir = '../Dist'
 const questions = [
     {
         type: "input",
-        name: "github",
+        name: "username",
         section: "Please give Github username"
       },
       {
@@ -40,7 +40,7 @@ const questions = [
       },
       {
         type: "input",
-        name: "test",
+        name: "test-info",
         section: "Please give any test instructions"
       },
       {
@@ -63,23 +63,22 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(directory, fileName, data) {
   const filePath = path.join(directory, fileName);
-return fs.writeFileSync(filePath, data);
+  fs.writeFile(filePath, data, (err) => {
+    if (err) {
+      console.error('An error occurred while writing the file:', err);
+    } else {
+      console.log('Check out your new README in the results folder!');
+    }
+  });
 }
-    console.log('check out your new README in the results folder!')
 
-// catch((err) => {
-//     if (err) {
-//       throw err;
-//     }
-// })
-;
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
     .then((answers) => {
          writeToFile("./results", "README.md", gm({...answers}));
-    })
+             })
 }
 
 // Function call to initialize app

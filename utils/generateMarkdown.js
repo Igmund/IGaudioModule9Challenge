@@ -31,7 +31,7 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
  
-  ${renderLicenseBadge(data.license)}
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${renderLicenseBadge(data.license)}
 
   ## Username
   ${data.username}
@@ -46,7 +46,7 @@ ${data.description}
 - [Usage](#usage)
 - [License](#license)
 - [Contribution](#contribution)
-- [Test Info](#test info)
+- [Test Info](#test-info)
 - [Contact Info](#contact-info)
 
 ## Installation
