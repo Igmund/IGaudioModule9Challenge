@@ -35,12 +35,12 @@ const questions = [
       {
         type: "input",
         name: "contributions",
-        message: "Please give contributors:"
+        message: "Please give contributors some guidelines:"
       },
       {
         type: "input",
-        name: "test-info",
-        message: "Please give any test instructions:"
+        name: "testinfo",
+        message: "Please describe any test instructions:"
       },
       {
         type: 'list',
