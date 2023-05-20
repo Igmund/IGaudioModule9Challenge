@@ -4,6 +4,7 @@ function renderLicenseBadge(license) {
   if(license === 'None'){
     return '';
   } else {
+    const licenseWithoutSpaces = license.replace(/\s/g, '');
     return `![license](https://img.shields.io/badge/${licenseWithoutSpaces}-pink.svg)`
   }
 }
@@ -14,8 +15,8 @@ function renderLicenseLink(license) {
   if(license === 'None'){
     return '';
   } else {
-  const licenseWithoutSpaces = license.replace(/\s/g, '');
-    return `https://opensource.org/licenses/${licenseWithoutSpaces}`
+  const licenseAWithoutSpaces = license.replace(/\s/g, '');
+    return `https://opensource.org/licenses/${licenseAWithoutSpaces}`
   }
 }
 
@@ -32,6 +33,9 @@ function generateMarkdown(data) {
 
  
   ${renderLicenseBadge(data.license)}
+
+  ## Username
+  ${data.username}
  
   ## Description
 ${data.description}
@@ -43,8 +47,7 @@ ${data.description}
 - [Usage](#usage)
 - [License](#license)
 - [Contribution](#contribution)
-- [Test Info](#test)
-- [Questions](#questions)
+- [Test Info](#test info)
 - [Contact Info](#contact-info)
 
 ## Installation
