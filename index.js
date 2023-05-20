@@ -3,7 +3,6 @@ const inquirer = require('inquirer')
 const fs = require('fs')
 const gm = require('./utils/generateMarkdown')
 const path = require('path')
-
 let dir = '../Dist'
 
 // TODO: Create an array of questions for user input
@@ -11,48 +10,48 @@ const questions = [
     {
         type: "input",
         name: "username",
-        section: "Please give Github username"
+        message: "Please give Github username:"
       },
       {
         type: "input",
         name: "title",
-        section: "Please give project title"
+        message: "Please give project title:"
       },
       {
         type: "input",
         name: "description",
-        section: "Please give description"
+        message: "Please give description:"
       },
        {
         type: "input",
         name: "instructions",
-        section: "Please give installation instructions"
+        message: "Please give installation instructions:"
       },
       {
         type: "input",
         name: "usageinfo",
-        section: "Please give usage information"
+        message: "Please give usage information:"
       },
       {
         type: "input",
         name: "contributions",
-        section: "Please give contributors"
+        message: "Please give contributors:"
       },
       {
         type: "input",
         name: "test-info",
-        section: "Please give any test instructions"
+        message: "Please give any test instructions:"
       },
       {
         type: 'list',
         name: 'license',
-        section: 'Please choose a license (use arrow keys and hit enter)',
+        message: 'Please choose a license (use arrow keys and hit enter)',
         choices: ['None', 'Apache 2.0', 'MIT', 'GNU GPLv3', 'Mozilla Public 2.0', 'Do What The F*ck You Want To Public License', 'The Unlicense']
     },
     {
         type: "input",
         name: "email",
-        section: "Please give email address"
+        message: "Please give email address:"
       },
 
 ];
@@ -75,6 +74,7 @@ function writeToFile(directory, fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+  console.log("Welcome to Igmund's README generator!\n");
     inquirer.prompt(questions)
     .then((answers) => {
          writeToFile("./results", "README.md", gm({...answers}));
