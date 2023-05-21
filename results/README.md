@@ -16,9 +16,8 @@ Creates super pro readmes for the user
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contribution)
-- [Tests](#test-info)
+- [Tests](#testinfo)
 - [Questions](#questions)
-- [Contact Info](#contact-info)
 
 ## Installation
   Just do it!
