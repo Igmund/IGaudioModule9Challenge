@@ -5,7 +5,7 @@ function renderLicenseBadge(license) {
     return '';
   } else {
     const licenseWithoutSpaces = license.replace(/\s/g, '');
-    return `![license](https://img.shields.io/badge/LICENSE:-${licenseWithoutSpaces}-pink.svg)`
+    return `![license](https://img.shields.io/badge/LICENSE:-${licenseWithoutSpaces}-blueviolet.svg)`
   }
 }
 

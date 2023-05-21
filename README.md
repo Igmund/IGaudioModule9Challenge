@@ -1,11 +1,10 @@
 # IGaudioModule9Challenge
 Node.JS Professional README Generator
-Link to demonstration video https://igmund.github.io/IGaudioModule6Challenge/
+Link to demonstration video xxxxxxxx
 
 //Readme on REPO with link to video on it
 Github repo link must be submitted (this will have the readme with the video link)
-Readme file output file must be submitted also
-Upload output readme as attachment
+Readme output file must be submitted also (Upload output readme as attachment)
 
 **User Story**
 
@@ -46,10 +45,6 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 
 THEN I am taken to the corresponding section of the README
-
-![Mock-up](assets/images/Mock-up.png)
-
-![Real-Deal](assets/images/Real-deal.jpg)
 
 **Tech Utilised**
 
