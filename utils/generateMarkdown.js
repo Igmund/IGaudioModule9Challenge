@@ -47,9 +47,8 @@ ${data.description}
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contribution)
-- [Tests](#test-info)
+- [Tests](#testinfo)
 - [Questions](#questions)
-- [Contact Info](#contact-info)
 
 ## Installation
   ${data.instructions}
