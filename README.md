@@ -1,10 +1,7 @@
 # IGaudioModule9Challenge
 Node.JS Professional README Generator
-Link to demonstration video xxxxxxxx
 
-//Readme on REPO with link to video on it
-Github repo link must be submitted (this will have the readme with the video link)
-Readme output file must be submitted also (Upload output readme as attachment)
+Link to demonstration video: https://watch.screencastify.com/v/n3fJPREdwJsDGmlZgBxo
 
 **User Story**
 
